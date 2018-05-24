@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'cucumber'
-require 'hashie'
 require 'selenium-webdriver'
 
 Before do |scenario|
@@ -9,7 +8,7 @@ Before do |scenario|
   @driver.manage.timeouts.script_timeout = 60
   @driver.manage.timeouts.page_load = 60
   @home = Home.new(@driver)
-  @page=Page.new(@driver)
+  @page = Page.new(@driver)
   @footer = Footer.new(@driver)
 end
 
