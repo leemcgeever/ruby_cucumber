@@ -1,4 +1,4 @@
-#Example Repository to test out using cucumber,Ruby and Selenium Webdriver
+# Example Repository to test out using cucumber,Ruby and Selenium Webdriver
 
 ***Installation***
 1. Clone the Repository using git@github.com:JellyfishGroup/ruby_cucumber.git
@@ -8,6 +8,7 @@
 5. This should install the gems required to run the project
 
 ***Executing the tests***
+
 Once the project dependencies have been installed, run a test to verify all is well.
 
 To do this run the following command line instruction `bundle exec cucumber`
