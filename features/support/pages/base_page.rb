@@ -35,4 +35,18 @@ def findElementBy (type, value)
   end
 end
 
+def cookieMessagePresent
+  cookie_page = findElementBy("css", ".cookies-box")
+
+  if cookie_page.displayed?
+    then closeCookieMessage
+  else
+    puts 'cookie box not present'
+  end
+end
+
+def closeCookieMessage
+  findElementBy("class", ".add-cookies btn-primary").click
+end
+
 end
