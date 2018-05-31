@@ -10,7 +10,6 @@ Scenario: Verify home page has loaded
   Then I can see the footer has loaded
   And the copyright text of "© Copyright Jellyfish Group 1999-2018" is displayed
 
-@lm
 Scenario: site visitors can complete the home page footer contact us form
   When I complete the contact form with:
   | contactname   | Contact Page User                       |
