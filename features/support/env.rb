@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'cucumber'
+require 'pry'
 require 'selenium-webdriver'
 
 Before do |scenario|
@@ -10,6 +11,7 @@ Before do |scenario|
   @home = Home.new(@driver)
   @page = Page.new(@driver)
   @footer = Footer.new(@driver)
+  @ContactForm = ContactForm.new(@driver)
 end
 
 After do |scenario|

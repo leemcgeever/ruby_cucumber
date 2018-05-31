@@ -36,17 +36,18 @@ def findElementBy (type, value)
 end
 
 def cookieMessagePresent
+  sleep 2 #allow the cookie message to load if it's going to - it's slow to load
   cookie_page = findElementBy("css", ".cookies-box")
 
   if cookie_page.displayed?
     then closeCookieMessage
   else
-    puts 'cookie box not present'
+    puts "cookie box not present"
   end
 end
 
 def closeCookieMessage
-  findElementBy("class", ".add-cookies btn-primary").click
+  findElementBy("css", "body > div.cookies-overlay > div > button").click
 end
 
 end
