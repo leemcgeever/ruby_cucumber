@@ -7,7 +7,7 @@ class ContactForm < Page
     enter_company_name(table)
     select_service_from_list
     enter_message(table)
-    # verify_signup_checkbox
+    verify_signup_checkbox
     verify_captcha_present
   end
 

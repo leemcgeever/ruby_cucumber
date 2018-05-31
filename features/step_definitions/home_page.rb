@@ -25,5 +25,5 @@ When(/^I complete the contact form with:$/) do |table|
 end
 
 Then(/^I can verify the form is complete$/) do
-@ContactForm.verify_submit_button
+  @ContactForm.verify_submit_button
 end
