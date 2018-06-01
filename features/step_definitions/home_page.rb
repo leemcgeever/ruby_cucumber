@@ -1,5 +1,5 @@
-Given(/^I vist "([^"]*)"$/) do |url|
-  @home.openSite(url)
+Given(/^I vist the home page$/) do
+  @home.openSite($BASE_URL)
   @page.cookieMessagePresent
 end
 

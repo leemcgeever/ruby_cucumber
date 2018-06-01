@@ -29,3 +29,11 @@ Feature: Contact us
 3 steps (3 passed)
 0m6.396s
 ```
+
+***Running tests on different environments***
+
+There is a config.yml file (config/config.yml) in the project.  Inside this file, the different URL's are listed for the supported environments.  In order to specify which environment to run the tests on you can add a command line switch
+`TEST_ENV=production` to the end of the run command.  EG.
+`bundle exec cucumber features TEST_ENV=production`
+
+By default the tests run on the `test` url unless you add the command line switch

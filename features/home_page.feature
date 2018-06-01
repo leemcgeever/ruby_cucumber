@@ -4,7 +4,7 @@ Feature: Home Page tests
   verify the home page footer contact us form can be completed (not submitted)
 
 Background:
-  Given I vist "https://jellyfish-test.jellyfish.co.uk/"
+  Given I vist the home page
 
 Scenario: Verify home page has loaded
   Then I can see the footer has loaded
