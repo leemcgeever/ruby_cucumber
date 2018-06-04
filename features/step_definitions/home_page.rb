@@ -24,15 +24,6 @@ When(/^I complete the contact form with:$/) do |table|
   @ContactForm.completeContactForm(@table)
 end
 
-When(/^I navigate to the contact form using the sidebar link$/) do
-  @ContactForm.sidebarContactForm
-end
-
 Then(/^I can verify the form is complete$/) do
   @ContactForm.verify_submit_button
-end
-
-
-Then(/^I am on the "([^"]*)" page$/) do |page_title|
-  @page.verifyOnExpectedPage(page_title)
 end

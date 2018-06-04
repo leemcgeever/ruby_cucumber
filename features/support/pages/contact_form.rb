@@ -14,7 +14,7 @@ class ContactForm < Page
   def enter_contact_name(table)
     contactname = findElementBy("id", "edit-submitted-column1-name")
     @driver.execute_script("arguments[0].scrollIntoView(true);", contactname)
-    binding.pry
+
     contactNameData = table["contactname"]
     contactname.send_keys(contactNameData)
   end
@@ -62,9 +62,5 @@ class ContactForm < Page
 
   def verify_submit_button
     findElementBy("css", ".webform-submit").displayed?
-  end
-
-  def sidebarContactForm
-    findElementBy("css", ".top-menu > li:nth-child(11) > a:nth-child(2)").click
   end
 end
