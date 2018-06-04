@@ -14,7 +14,6 @@ class ContactForm < Page
   def enter_contact_name(table)
     contactname = findElementBy("id", "edit-submitted-column1-name")
     @driver.execute_script("arguments[0].scrollIntoView(true);", contactname)
-
     contactNameData = table["contactname"]
     contactname.send_keys(contactNameData)
   end

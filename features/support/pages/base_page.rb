@@ -54,6 +54,7 @@ class Page
     expectedpage = "holdingvalue"
     expectedpage.replace page_title
     actualpage = findElementBy("css", ".content-hero-title > h1:nth-child(1)").text
+    binding.pry
     actualpage == expectedpage
   end
 end

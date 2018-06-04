@@ -13,11 +13,11 @@ Scenario: Verify home page has loaded
 
 Scenario: site visitors can complete the home page footer contact us form
   When I complete the contact form with:
-  | contactname   | Contact Page User                       |
-  | email         | email@email.com                         |
-  | phone         | 01273123456                             |
-  | company_name  | Company Name                            |
-  | message       | This is a test contact us form message  |
+    | contactname   | Contact Page User                       |
+    | email         | email@email.com                         |
+    | phone         | 01273123456                             |
+    | company_name  | Company Name                            |
+    | message       | This is a test contact us form message  |
   Then I can verify the form is complete
 
   Scenario: verify that site visitors can navigate to the contact us from via the site sidebar
