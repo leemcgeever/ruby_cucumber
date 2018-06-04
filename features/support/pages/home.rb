@@ -1,7 +1,6 @@
+# Home Page Methods
 class Home < Page
-
-  def openSite(url)
+  def open_site(url)
     @driver.get url
   end
-
 end

@@ -1,14 +1,14 @@
 Given(/^I vist the home page$/) do
-  @home.openSite($BASE_URL)
-  @page.cookieMessagePresent
+  @home.open_site(BASE_URL)
+  @page.cookie_message_present
 end
 
 When(/^the cookie form is displayed$/) do
-  @page.cookieMessagePresent
+  @page.cookie_message_present
 end
 
 Then(/^I can close the form$/) do
-  @page.closeCookieMessage
+  @page.close_cookie_message
 end
 
 Then(/^I can see the footer has loaded$/) do
@@ -21,17 +21,17 @@ end
 
 When(/^I complete the contact form with:$/) do |table|
   @table = table.rows_hash
-  @ContactForm.completeContactForm(@table)
+  @contact_form.complete_contact_form(@table)
 end
 
 When(/^I navigate to the contact form using the sidebar link$/) do
-  @ContactForm.sidebarContactForm
+  @contact_form.sidebar_contact_form
 end
 
 Then(/^I can verify the form is complete$/) do
-  @ContactForm.verify_submit_button
+  @contact_form.verify_submit_button
 end
 
 Then(/^I am on the "([^"]*)" page$/) do |page_title|
-  @page.verifyOnExpectedPage(page_title)
+  @page.verify_on_expected_page(page_title)
 end
