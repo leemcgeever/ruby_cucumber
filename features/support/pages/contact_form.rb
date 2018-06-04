@@ -63,4 +63,8 @@ class ContactForm < Page
   def verify_submit_button
     findElementBy("css", ".webform-submit").displayed?
   end
+
+  def sidebarContactForm
+    findElementBy("css", ".top-menu > li:nth-child(11) > a:nth-child(2)").click
+  end
 end
