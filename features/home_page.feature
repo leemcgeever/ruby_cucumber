@@ -12,7 +12,7 @@ Scenario: Verify home page has loaded
   Then I can see the footer has loaded
   And the copyright text of "© Copyright Jellyfish Group 1999-2018" is displayed
 
-@smoke
+@smoke @lm
 Scenario: site visitors see a recaptcha message when completing and submitting the contact form
   When I complete the contact form with:
     | contactname   | Contact Page User                       |
@@ -21,7 +21,7 @@ Scenario: site visitors see a recaptcha message when completing and submitting t
     | company_name  | Company Name                            |
     | message       | This is a test contact us form message  |
   When I attempt to submit my contact details without completing the recaptcha
-  Then I should see an appropriate error message
+  Then I should see the error message "reCAPTCHA is required"
 
 Scenario: verify that site visitors can navigate to the contact us from via the site sidebar
   When I navigate to the contact form using the sidebar link

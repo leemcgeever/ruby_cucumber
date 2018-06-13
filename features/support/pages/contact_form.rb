@@ -62,8 +62,8 @@ class ContactForm < Page
     find_element_by('css', '.webform-submit').click
   end
 
-  def verify_recaptcha_errors
-    find_element_by('css', '.recaptcha_error').text == 'reCAPTCHA is required'
+  def verify_recaptcha_errors(recaptcha_error)
+    find_element_by('css', '.recaptcha_error').text == (recaptcha_error)
   end
 
   def click_sidebar_contact_form

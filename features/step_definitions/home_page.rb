@@ -36,6 +36,6 @@ When(/^I attempt to submit my contact details without completing the recaptcha$/
   @contact_form.click_submit_contact_form
 end
 
-Then(/^I should see an appropriate error message$/) do
-  @contact_form.verify_recaptcha_errors
+Then(/^I should see the error message "([^"]*)"$/) do |recaptcha_error|
+  @contact_form.verify_recaptcha_errors(recaptcha_error)
 end
