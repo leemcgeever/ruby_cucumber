@@ -25,13 +25,17 @@ When(/^I complete the contact form with:$/) do |table|
 end
 
 When(/^I navigate to the contact form using the sidebar link$/) do
-  @contact_form.sidebar_contact_form
-end
-
-Then(/^I can verify the form is complete$/) do
-  @contact_form.verify_submit_button
+  @contact_form.click_sidebar_contact_form
 end
 
 Then(/^I am on the "([^"]*)" page$/) do |page_title|
   @page.verify_on_expected_page(page_title)
+end
+
+When(/^I attempt to submit my contact details without completing the recaptcha$/) do
+  @contact_form.click_submit_contact_form
+end
+
+Then(/^I should see the error message "([^"]*)"$/) do |recaptcha_error|
+  @contact_form.verify_recaptcha_errors(recaptcha_error)
 end
