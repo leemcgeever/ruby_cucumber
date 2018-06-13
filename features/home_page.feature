@@ -1,7 +1,7 @@
 @homepage
 Feature: Home Page tests
 verfiy the footer has loaded correctly (basic test for framework)
-verify the home page footer contact us form can be completed (not submitted due to recaptcha)
+verify the home page footer contact us form displays an error msg when recaptcha not set)
 navigate to the contact us form via sidebar and verify correct page loaded
 
 Background:
