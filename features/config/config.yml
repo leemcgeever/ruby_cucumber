@@ -1,0 +1,5 @@
+test:
+  :url: https://jellyfish-test.jellyfish.co.uk
+
+production:
+  :url: http://www.jellyfish.co.uk
