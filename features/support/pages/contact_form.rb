@@ -58,11 +58,15 @@ class ContactForm < Page
     find_element_by('class', 'g-recaptcha').displayed?
   end
 
-  def verify_submit_button
-    find_element_by('css', '.webform-submit').displayed?
+  def click_submit_contact_form
+    find_element_by('css', '.webform-submit').click
   end
 
-  def sidebar_contact_form
+  def verify_recaptcha_errors
+    find_element_by('css', '.recaptcha_error').text == 'reCAPTCHA is required'
+  end
+
+  def click_sidebar_contact_form
     find_element_by('css', '.top-menu > li:nth-child(11) > a:nth-child(2)').click
   end
 end
