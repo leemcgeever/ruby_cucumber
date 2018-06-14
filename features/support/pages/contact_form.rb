@@ -63,7 +63,7 @@ class ContactForm < Page
   end
 
   def verify_recaptcha_errors(recaptcha_error)
-    find_element_by('css', '.recaptcha_error').text == (recaptcha_error)
+    find_element_by('css', '.recaptcha_error').text == recaptcha_error
   end
 
   def click_sidebar_contact_form

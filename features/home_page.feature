@@ -12,7 +12,7 @@ Scenario: Verify home page has loaded
   Then I can see the footer has loaded
   And the copyright text of "© Copyright Jellyfish Group 1999-2018" is displayed
 
-@smoke @lm
+@smoke
 Scenario: site visitors see a recaptcha message when completing and submitting the contact form
   When I complete the contact form with:
     | contactname   | Contact Page User                       |
@@ -26,3 +26,7 @@ Scenario: site visitors see a recaptcha message when completing and submitting t
 Scenario: verify that site visitors can navigate to the contact us from via the site sidebar
   When I navigate to the contact form using the sidebar link
   Then I am on the "Contact Us" page
+
+Scenario: use locale switcher to select other JF locales
+  When I select the "Spain" site from the locale switcher
+  Then I should be taken to the "ES EN" site
