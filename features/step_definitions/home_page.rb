@@ -39,3 +39,11 @@ end
 Then(/^I should see the error message "([^"]*)"$/) do |recaptcha_error|
   @contact_form.verify_recaptcha_errors(recaptcha_error)
 end
+
+When(/^I select the "([^"]*)" site from the locale switcher$/) do |selected_locale|
+  @home.locale_selection(selected_locale)
+end
+
+Then(/^I should be taken to the "([^"]*)" site$/) do |expected_locale|
+  @home.cofirm_locale_selection(expected_locale)
+end
