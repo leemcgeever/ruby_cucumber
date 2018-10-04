@@ -1,5 +1,5 @@
 test:
-  :url: https://jellyfish-test.jellyfish.co.uk
+  :url: https://www.jellyfish.co.uk
 
 production:
   :url: http://www.jellyfish.co.uk
